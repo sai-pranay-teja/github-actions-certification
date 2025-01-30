@@ -1,0 +1,16 @@
+on: 
+  push:
+    branches:
+        - main
+        - dev
+
+jobs:
+  multi_event:
+    runs-on: ubuntu-latest
+    steps:
+    - name: This is multi event
+      run: |
+        echo "Action: $GITHUB_ACTION"
+        echo "JOB ID: $GITHUB_JOB"
+
+      
