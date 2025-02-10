@@ -15,3 +15,10 @@ jobs:
               echo "Msg 1"
               echo "msg 2"
               echo "::endgroup::"
+          - name: Set Env step 1
+            run: |
+              echo "MY_VALUE=hello" >> $GITHUB_ENV
+              echo "Msg 1"
+          - name: Accessing the env
+            run: |
+              echo $MY_VALUE
