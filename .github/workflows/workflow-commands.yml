@@ -11,7 +11,7 @@ jobs:
         steps:
           - name: group logging
             run: |
-              echo "::group:My Message Group"
+              echo "::group::My Message Group"
               echo "Msg 1"
               echo "msg 2"
               echo "::endgroup::"
