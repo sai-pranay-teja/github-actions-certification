@@ -1,0 +1,20 @@
+name: Workflow contexts examples
+
+
+on: [push]
+
+
+jobs:
+    context-workflow:
+      runs-on: ubuntu-latest
+
+
+
+      steps:
+        - name: using contexts
+          run: |
+            echo "The repository name is $REPO_NAME"
+            echo "The name of the actor is $ACTOR_NAME"
+          env:
+            REPO_NAME: ${{ github.action_repository }}
+            ACTOR_NAME: $${{ github.actor }}
