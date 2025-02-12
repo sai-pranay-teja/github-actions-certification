@@ -18,4 +18,4 @@ jobs:
             echo "The name of the actor is $ACTOR_NAME"
           env:
             REPO_NAME: ${{ github.action_repository }}
-            ACTOR_NAME: $${{ github.actor }}
+            ACTOR_NAME: ${{ github.actor }}
