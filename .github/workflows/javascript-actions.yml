@@ -1,0 +1,16 @@
+name: Javascript Actions
+on: [push]
+
+jobs:
+  actions-job:
+    runs-on: ubuntu-latest
+    name: A job to say hello
+    steps:
+      - name: Hello world action step
+        id: hello
+        uses: octocat/hello-world-javascript-action@0.0.1
+        with:
+          name: 'pranay'
+      # Use the output from the `hello` step
+      - name: Get the output greeting
+        run: echo "The greeting was ${{ steps.hello.outputs.greeting_value }}"
