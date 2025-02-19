@@ -8,11 +8,10 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: sai-pranay-teja/javascript-actions@0.0.2
+        uses: sai-pranay-teja/javascript-actions@0.0.3
         with:
           name: 'pranay'
       # Use the output from the `hello` step
       - name: Get the output greeting
         run: echo "The greeting was ${{ steps.hello.outputs.greeting_value }}"
 
-        
