@@ -8,7 +8,7 @@ jobs:
     steps:
       - name: Hello world action step
         id: hello
-        uses: sai-pranay-teja/javascript-actions@0.0.5
+        uses: sai-pranay-teja/javascript-actions@0.0.6
         with:
           name: 'pranay'
       # Use the output from the `hello` step
